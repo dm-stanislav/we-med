@@ -1,0 +1,1 @@
+const manageForms=o=>o.ok;
