@@ -1,1 +1,1 @@
-const manageForms=o=>o.ok;
+window.manageForms=e=>{if(["schedule_modal_form","partnership_modal_form"].includes(e.formElement.id)&&e.ok){const t=document.getElementById("example_toast"),o=Toast.getOrCreateInstance(t);o.show(),setTimeout((()=>{o.hide()}),5e3),e.formElement.reset(),e.stopValidation();const m=e.formElement.closest(".modal");m&&Modal.getOrCreateInstance(m).hide()}return!1};
