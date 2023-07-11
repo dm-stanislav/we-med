@@ -900,15 +900,14 @@
                 </div>
                 <div class="modal-form-item">
                   <div class="input medium">
-                    <!-- Якщо це вибір міста, як в даному прикладі, то 1) потрібно додати клас 'input-element-city'; 2) варто вимкнути автокомпліт, щоб не конфліктував з datalist; 3) додати datalist і атрибут list до інпуту.-->
-                    <input class="input-element input-element-city trs-base" type="text" placeholder="місто*" name="city" required minlength="2" autocomplete="off" list="cityDatalist"></input>
-                    <datalist id="cityDatalist"></datalist>
+                    <!-- Якщо це вибір міста, як в даному прикладі, то 1) потрібно додати клас 'input-element-city'; 2) варто вимкнути автокомпліт, щоб не було конфліктів.-->
+                    <input class="input-element input-element-city trs-base" type="text" placeholder="місто*" name="city" required minlength="2" autocomplete="off"></input>
                     <div class="input-error-icon">
                       <svg class="icon icon-sm">
                         <use href="#error_icon"></use>
                       </svg>
                     </div>
-                    <div class="input-error-message">Це обов’язкове поле</div>
+                    <div class="input-error-message">Будь ласка, виберіть населений пункт зі списку</div>
                   </div>
                 </div>
                 <div class="modal-form-item">
