@@ -629,6 +629,141 @@
         </div>
         <!-- === / COPYRIGHT ===-->
       </footer>
+      <!-- === MODALS ===-->
+      <div class="modal" id="salon_modal" tabIndex="-1" aria-labelledby="salon_modal_title" aria-hidden="true">
+        <div class="modal-dialog trs-grow">
+          <div class="modal-content">
+            <!-- === CIRCLE ===-->
+            <div class="modal-orbit-wrapper">
+              <div class="orbit modal-orbit">
+                <svg class="orbit-svg modal-orbit-svg" viewBox="0 0 600 600">
+                  <use href="#orbit_icon"></use>
+                </svg><span class="orbit-circle modal-orbit-circle modal-orbit-circle-1"></span>
+              </div>
+            </div>
+            <!-- === / CIRCLE ===-->
+            <div class="modal-header">
+              <div class="modal-title uppercase bold" id="salon_modal_title">ДОДАТИ САЛОН</div>
+            </div>
+            <button class="link link-dark trs-base medium modal-close" type="button" aria-label="Закрити">
+              <svg class="icon icon-sm">
+                <use href="#close_icon"></use>
+              </svg>
+            </button>
+            <div class="modal-body">
+              <!-- Можна додати атрибут `data-sd-callback` з назвою функції, яка буде викликатися при відправці. Як аргумент, дається об'єкт з даними.-->
+              <form class="modal-form validate" id="salon_modal_form">
+                <div class="modal-form-item">
+                  <div class="input medium">
+                    <input class="input-element trs-base" type="text" placeholder="Назва салону*" name="name" required minlength="2"></input>
+                    <div class="input-error-icon">
+                      <svg class="icon icon-sm">
+                        <use href="#error_icon"></use>
+                      </svg>
+                    </div>
+                    <div class="input-error-message">Це обов’язкове поле</div>
+                  </div>
+                </div>
+                <div class="modal-form-item">
+                  <div class="input medium">
+                    <!-- Якщо це вибір міста, як в даному прикладі, то 1) потрібно додати клас 'input-element-city'; 2) варто вимкнути автокомпліт, щоб не було конфліктів.-->
+                    <input class="input-element input-element-city trs-base" type="text" placeholder="місто*" name="city" required minlength="2" autocomplete="off"></input>
+                    <div class="input-error-icon">
+                      <svg class="icon icon-sm">
+                        <use href="#error_icon"></use>
+                      </svg>
+                    </div>
+                    <div class="input-error-message">Будь ласка, виберіть населений пункт зі списку</div>
+                  </div>
+                </div>
+                <div class="modal-form-item">
+                  <div class="input medium">
+                    <input class="input-element trs-base" type="text" placeholder="Адреса*" name="address" required minlength="2"></input>
+                    <div class="input-error-icon">
+                      <svg class="icon icon-sm">
+                        <use href="#error_icon"></use>
+                      </svg>
+                    </div>
+                    <div class="input-error-message">Це обов’язкове поле</div>
+                  </div>
+                </div>
+                <div class="modal-form-item">
+                  <div class="input medium">
+                    <input class="input-element trs-base" type="tel" placeholder="Номер телефону*" name="phone" required></input>
+                    <div class="input-error-icon">
+                      <svg class="icon icon-sm">
+                        <use href="#error_icon"></use>
+                      </svg>
+                    </div>
+                    <div class="input-error-message">Будь ласка, введіть коректний номер телефону</div>
+                  </div>
+                </div>
+                <div class="modal-form-item">
+                  <div class="input medium">
+                    <input class="input-element trs-base" type="tel" placeholder="Номер телефону 2" name="phone2"></input>
+                    <div class="input-error-icon">
+                      <svg class="icon icon-sm">
+                        <use href="#error_icon"></use>
+                      </svg>
+                    </div>
+                    <div class="input-error-message">Будь ласка, введіть коректний номер телефону</div>
+                  </div>
+                </div>
+                <div class="modal-form-item">
+                  <div class="input input-textarea medium">
+                    <textarea class="input-element trs-base" placeholder="Тип салону (Салон краси, Косметологічний центр...)" name="type"></textarea>
+                    <div class="input-error-icon">
+                      <svg class="icon icon-sm">
+                        <use href="#error_icon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-item">
+                  <div class="select" data-sd-placeholder="Бренди" data-sd-multiple="true">
+                    <div class="dropdown dropdown-start">
+                      <input class="select-input" type="text" name="brands" required tabIndex="-1">
+                      <button class="select-button" type="button" data-sd-toggle="dropdown" aria-expanded="false" data-sd-offset="[5, 0]"><span class="select-button-text select-button-text-placeholder">Бренди</span><span class="select-button-icon">
+                          <svg class="icon icon-sm">
+                            <use href="#expand_icon"></use>
+                          </svg></span></button>
+                      <div class="select-error-message medium">Це обов’язкове поле</div>
+                      <div class="select-dropdown dropdown-menu trs-grow">
+                        <div class="select-list-wrapper">
+                          <ul class="select-list dropdown-list fancy-scrollbar">
+                            <li>
+                              <button class="select-item dropdown-item" type="button">Skin Tech Farma Group
+                              </button>
+                            </li>
+                            <li>
+                              <button class="select-item dropdown-item" type="button">Sensilis
+                              </button>
+                            </li>
+                            <li>
+                              <button class="select-item dropdown-item" type="button">Elementari
+                              </button>
+                            </li>
+                            <li>
+                              <button class="select-item dropdown-item" type="button">Neova
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-contained btn-secondary trs-base medium" type="submit" form="salon_modal_form">Надіслати
+              </button>
+              <div class="modal-form-caption caption semi">*  Обов’язкові поля</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- === / MODALS ===-->
       <!-- === ETC ===-->
       <div class="cookies trs-base">
         <div class="cookies-body">
